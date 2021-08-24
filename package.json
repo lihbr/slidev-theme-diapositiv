@@ -1,0 +1,63 @@
+{
+	"name": "slidev-theme-diapositiv",
+	"version": "0.0.0",
+	"description": "Diapositiv Slidev theme",
+	"keywords": [
+		"lihbr",
+		"slidev-theme",
+		"slidev"
+	],
+	"repository": {
+		"type": "git",
+		"url": "ssh://git@github.com/lihbr/lihbr-diapositiv.git"
+	},
+	"license": "MIT",
+	"author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
+	"type": "module",
+	"scripts": {
+		"dev": "slidev playground/slides.md",
+		"build": "slidev build playground/slides.md",
+		"export": "slidev export playground/slides.md",
+		"screenshot": "slidev export playground/slides.md --format png",
+		"prepare": "husky install",
+		"release": "npm run build && npm run test && standard-version && git push --follow-tags && npm run build && npm publish",
+		"release:dry": "standard-version --dry-run",
+		"release:alpha": "npm run build && npm run test && standard-version --release-as major --prerelease alpha && git push --follow-tags && npm run build && npm publish --tag alpha",
+		"release:alpha:dry": "standard-version --release-as major --prerelease alpha --dry-run",
+		"lint": "eslint --ext .js,.ts .",
+		"unit": "echo \"Error: no test command specified\" && exit 0",
+		"test": "npm run lint && npm run unit"
+	},
+	"engines": {
+		"node": ">=14.0.0",
+		"slidev": ">=0.19.3"
+	},
+	"dependencies": {
+		"@slidev/types": "0.22.7",
+		"codemirror-theme-vars": "0.1.1",
+		"prism-theme-vars": "0.2.2",
+		"color": "4.0.1"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "13.1.0",
+		"@commitlint/config-conventional": "13.1.0",
+		"@slidev/cli": "0.22.7",
+		"eslint": "7.32.0",
+		"eslint-config-prettier": "8.3.0",
+		"eslint-plugin-prettier": "3.4.1",
+		"husky": "7.0.1",
+		"playwright-chromium": "1.14.0",
+		"prettier": "2.3.2"
+	},
+	"slidev": {
+		"colorSchema": "both",
+		"highlighter": "prism",
+		"defaults": {
+			"titleTemplate": "%s - Diapositiv",
+			"hightlighter": "prism",
+			"fonts": {
+				"sans": "Roboto"
+			}
+		}
+	}
+}

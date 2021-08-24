@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"resolveJsonModule": true,
+		"baseUrl": ".",
+	},
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}
