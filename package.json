@@ -9,7 +9,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "ssh://git@github.com/lihbr/lihbr-diapositiv.git"
+		"url": "ssh://git@github.com/lihbr/slidev-theme-diapositiv.git"
 	},
 	"license": "MIT",
 	"author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",

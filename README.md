@@ -3,7 +3,7 @@
 TODO: Replace all on all files:
 - slidev-theme-diapositiv
 - Diapositiv Slidev theme
-- lihbr/lihbr-diapositiv
+- lihbr/slidev-theme-diapositiv
 
 -->
 
@@ -75,10 +75,10 @@ Whether you're helping me fix bugs, improve the docs, or spread the word, I'd lo
 [changelog]: ./CHANGELOG.md
 [license]: ./LICENSE
 [slidev]: https://github.com/slidevjs/slidev
-[repo-question]: https://github.com/lihbr/lihbr-diapositiv/discussions
-[repo-bug-report]: https://github.com/lihbr/lihbr-diapositiv/issues/new?assignees=&labels=bug&template=bug_report.md&title=
-[repo-feature-request]: https://github.com/lihbr/lihbr-diapositiv/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
-[repo-pull-requests]: https://github.com/lihbr/lihbr-diapositiv/pulls
+[repo-question]: https://github.com/lihbr/slidev-theme-diapositiv/discussions
+[repo-bug-report]: https://github.com/lihbr/slidev-theme-diapositiv/issues/new?assignees=&labels=bug&template=bug_report.md&title=
+[repo-feature-request]: https://github.com/lihbr/slidev-theme-diapositiv/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
+[repo-pull-requests]: https://github.com/lihbr/slidev-theme-diapositiv/pulls
 
 <!-- Badges -->
 
@@ -86,10 +86,10 @@ Whether you're helping me fix bugs, improve the docs, or spread the word, I'd lo
 [npm-version-href]: https://npmjs.com/package/slidev-theme-diapositiv
 [npm-downloads-src]: https://img.shields.io/npm/dm/slidev-theme-diapositiv.svg
 [npm-downloads-href]: https://npmjs.com/package/slidev-theme-diapositiv
-[github-actions-ci-src]: https://github.com/lihbr/lihbr-diapositiv/workflows/ci/badge.svg
-[github-actions-ci-href]: https://github.com/lihbr/lihbr-diapositiv/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/github/lihbr/lihbr-diapositiv.svg
-[codecov-href]: https://codecov.io/gh/lihbr/lihbr-diapositiv
+[github-actions-ci-src]: https://github.com/lihbr/slidev-theme-diapositiv/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/lihbr/slidev-theme-diapositiv/actions?query=workflow%3Aci
+[codecov-src]: https://img.shields.io/codecov/c/github/lihbr/slidev-theme-diapositiv.svg
+[codecov-href]: https://codecov.io/gh/lihbr/slidev-theme-diapositiv
 [conventional-commits-src]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
 [conventional-commits-href]: https://conventionalcommits.org
 [license-src]: https://img.shields.io/npm/l/slidev-theme-diapositiv.svg
