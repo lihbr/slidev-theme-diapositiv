@@ -1,6 +1,7 @@
 .slidev-layout {
 	@apply font-400 leading-normal;
 	font-size: 1.25rem; /* 20px */
+	font-feature-settings: "ss01" on;
 
 	/* Headings */
 	h1,
@@ -9,7 +10,8 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-700 leading-normal;
+		@apply font-700 leading-snug;
+		font-feature-settings: initial;
 	}
 
 	h1 {
@@ -33,6 +35,19 @@
 
 	a {
 		@apply border-current border-b border-dashed hover:(text-$slidev-theme-primary border-solid);
+
+		/* &::before {
+			content: "[ ";
+		}
+
+		&::after {
+			content: " ]";
+		}
+
+		&::before,
+		&::after {
+			vertical-align: middle;
+		} */
 	}
 
 	kbd {

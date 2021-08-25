@@ -54,7 +54,7 @@
 		"colorSchema": "both",
 		"highlighter": "prism",
 		"defaults": {
-			"titleTemplate": "%s - Diapositiv",
+			"titleTemplate": "%s — Diapositiv",
 			"hightlighter": "prism",
 			"fonts": {
 				"sans": "Roboto"

@@ -27,7 +27,7 @@ html {
 }
 
 .slidev-layout {
-	@apply px-10 py-10 h-full;
+	@apply px-10 py-10 h-full relative;
 
 	pre,
 	code {
@@ -47,7 +47,7 @@ html {
 	}
 
 	blockquote {
-		@apply text-sm px-2 py-1 bg-$prism-background text-$prism-foreground border-$slidev-theme-primary border-l;
+		@apply text-sm px-2 py-1 bg-cream text-slate dark:(bg-slate text-cream) border-flamingo border-l-2;
 	}
 
 	table {
@@ -55,7 +55,7 @@ html {
 	}
 
 	tr {
-		@apply border-b border-slate-100 border-opacity-20;
+		@apply border-b border-slate dark:(border-cream) border-opacity-20;
 	}
 
 	th {

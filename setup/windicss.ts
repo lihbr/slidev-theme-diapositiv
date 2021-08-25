@@ -88,6 +88,12 @@ export default defineWindiSetup(() => ({
 					100: "#93bd71",
 				},
 			},
+			transitionDuration: {
+				DEFAULT: "400ms",
+			},
+			transitionTimingFunction: {
+				DEFAULT: "cubic-bezier(.54,.1,0,.99)",
+			},
 		},
 	},
 }));
