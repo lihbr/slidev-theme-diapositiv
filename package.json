@@ -35,18 +35,24 @@
 	"dependencies": {
 		"@slidev/types": "0.22.7",
 		"codemirror-theme-vars": "0.1.1",
-		"prism-theme-vars": "0.2.2",
-		"color": "4.0.1"
+		"color": "4.0.1",
+		"prism-theme-vars": "0.2.2"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "13.1.0",
 		"@commitlint/config-conventional": "13.1.0",
 		"@slidev/cli": "0.22.7",
+		"@types/color": "3.0.2",
+		"@typescript-eslint/eslint-plugin": "^4.29.2",
+		"@typescript-eslint/parser": "^4.29.2",
+		"@vue/eslint-config-typescript": "^7.0.0",
 		"eslint": "7.32.0",
 		"eslint-config-prettier": "8.3.0",
 		"eslint-plugin-prettier": "3.4.1",
-		"husky": "7.0.1",
-		"playwright-chromium": "1.14.0",
+		"eslint-plugin-tsdoc": "^0.2.14",
+		"eslint-plugin-vue": "^7.16.0",
+		"husky": "7.0.2",
+		"playwright-chromium": "1.14.1",
 		"prettier": "2.3.2",
 		"standard-version": "^9.3.1"
 	},
@@ -57,7 +63,8 @@
 			"titleTemplate": "%s — Diapositiv",
 			"hightlighter": "prism",
 			"fonts": {
-				"sans": "Roboto"
+				"sans": "Graphit, Roboto",
+				"local": "Graphit"
 			}
 		}
 	}

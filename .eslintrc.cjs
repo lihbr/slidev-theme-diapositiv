@@ -5,27 +5,34 @@ module.exports = {
 		node: true,
 	},
 	parserOptions: {
+		parser: "@typescript-eslint/parser",
 		ecmaVersion: 2020,
-		sourceType: "module",
 	},
-	extends: ["plugin:prettier/recommended"],
-	plugins: [],
+	extends: [
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+		"@vue/typescript/recommended",
+	],
+	plugins: ["eslint-plugin-tsdoc"],
 	rules: {
 		"no-console": ["warn", { allow: ["info", "warn", "error"] }],
 		"no-debugger": "warn",
-		"no-undef": 0,
+		"no-undef": "off",
 		curly: "error",
 		"prefer-const": "error",
 		"padding-line-between-statements": [
 			"error",
 			{ blankLine: "always", prev: "*", next: "return" },
 		],
-		"no-unused-vars": [
+		"@typescript-eslint/no-unused-vars": [
 			"error",
 			{
 				argsIgnorePattern: "^_",
 				varsIgnorePattern: "^_",
 			},
 		],
+		"@typescript-eslint/no-var-requires": "off",
+		"tsdoc/syntax": "warn",
 	},
 };
