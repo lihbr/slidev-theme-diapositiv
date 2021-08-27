@@ -16,16 +16,35 @@
 	}
 
 	h1 {
+		@apply pb-4;
 		font-size: 5rem; /* 80px */
 	}
 	h2 {
+		@apply pb-4;
 		font-size: 3.75rem; /* 60px */
 	}
 	h3 {
+		@apply pb-2;
 		font-size: 2.5rem; /* 40px */
 	}
 	h4 {
+		@apply pb-2;
 		font-size: 1.875rem; /* 30px */
+	}
+
+	&.pip-large {
+		h1 {
+			font-size: 3.75rem; /* 60px */
+		}
+		h2 {
+			font-size: 2.5rem; /* 40px */
+		}
+		h3 {
+			font-size: 1.875rem; /* 30px */
+		}
+		h4 {
+			font-size: 1.5rem; /* 24px */
+		}
 	}
 
 	/* Spans */
@@ -36,19 +55,6 @@
 
 	a {
 		@apply border-current border-b border-dashed hover:(text-$slidev-theme-primary border-solid);
-
-		/* &::before {
-			content: "[ ";
-		}
-
-		&::after {
-			content: " ]";
-		}
-
-		&::before,
-		&::after {
-			vertical-align: middle;
-		} */
 	}
 
 	blockquote {

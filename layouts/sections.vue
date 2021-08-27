@@ -27,3 +27,9 @@ const props = defineProps({
 
 defineExpose({ props });
 </script>
+
+<style>
+.slidev-layout.sections.pip-large {
+	@apply flex-col;
+}
+</style>

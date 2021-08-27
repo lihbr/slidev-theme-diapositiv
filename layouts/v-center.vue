@@ -1,6 +1,6 @@
 <template>
 	<layout class="v-center flex">
-		<div class="self-center">
+		<div class="self-center w-full">
 			<slot />
 		</div>
 	</layout>
@@ -11,7 +11,7 @@ import Layout from "./_layout.vue";
 </script>
 
 <style>
-.slidev-layout.v-center {
+.slidev-layout.v-center:not(.pip-large):not(.text-center) {
 	h1,
 	h2,
 	h3,
