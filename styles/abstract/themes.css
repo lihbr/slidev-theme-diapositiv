@@ -1,0 +1,29 @@
+.theme-navy {
+	--theme-color: theme("colors.navy.DEFAULT");
+	--slidev-theme-primary: theme("colors.navy.DEFAULT");
+}
+
+.theme-beet {
+	--theme-color: theme("colors.beet.DEFAULT");
+	--slidev-theme-primary: theme("colors.beet.DEFAULT");
+}
+
+.theme-flamingo {
+	--theme-color: theme("colors.flamingo.DEFAULT");
+	--slidev-theme-primary: theme("colors.flamingo.DEFAULT");
+}
+
+.theme-ochre {
+	--theme-color: theme("colors.ochre.DEFAULT");
+	--slidev-theme-primary: theme("colors.ochre.DEFAULT");
+}
+
+.theme-butter {
+	--theme-color: theme("colors.butter.DEFAULT");
+	--slidev-theme-primary: theme("colors.butter.DEFAULT");
+}
+
+.theme-mantis {
+	--theme-color: theme("colors.mantis.DEFAULT");
+	--slidev-theme-primary: theme("colors.mantis.DEFAULT");
+}

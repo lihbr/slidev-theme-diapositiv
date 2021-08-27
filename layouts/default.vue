@@ -1,11 +1,9 @@
 <template>
-  <div class="slidev-layout default">
-    <div class="my-auto">
-      <slot />
-    </div>
-  </div>
+	<layout class="default">
+		<slot />
+	</layout>
 </template>
 
-<style>
-.slidev-layout.default {}
-</style>
+<script setup lang="ts">
+import Layout from "./_layout.vue";
+</script>

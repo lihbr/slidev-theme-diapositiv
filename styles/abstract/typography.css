@@ -10,8 +10,9 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-700 leading-snug;
+		@apply font-700 text-$slidev-theme-primary;
 		font-feature-settings: initial;
+		line-height: 1.125;
 	}
 
 	h1 {
@@ -48,6 +49,10 @@
 		&::after {
 			vertical-align: middle;
 		} */
+	}
+
+	blockquote {
+		@apply text-sm px-2 py-1 bg-cream text-slate dark:(bg-slate text-cream) border-$slidev-theme-primary border-l-2;
 	}
 
 	kbd {

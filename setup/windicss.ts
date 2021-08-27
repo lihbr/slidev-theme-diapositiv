@@ -1,7 +1,8 @@
 import { resolve } from "path";
 import { defineWindiSetup } from "@slidev/types";
 import Color from "color";
-const alpha = (hexa, alpha = 1) => Color(hexa).alpha(alpha).rgb().toString();
+const alpha = (hexa: string, alpha = 1): string =>
+	Color(hexa).alpha(alpha).rgb().toString();
 
 export default defineWindiSetup(() => ({
 	extract: {
