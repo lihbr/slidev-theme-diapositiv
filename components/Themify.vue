@@ -1,3 +1,4 @@
+<!-- HEALTH:HIGH themify -->
 <template>
 	<component :is="props.as" :class="`theme-${current}`">
 		<slot />

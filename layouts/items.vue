@@ -1,3 +1,4 @@
+<!-- HEALTH:MID items -->
 <template>
 	<layout class="items flex">
 		<figure class="self-center w-full">
@@ -17,13 +18,12 @@
 				<slot name="items" />
 			</div>
 		</figure>
+		<slot name="after" />
 	</layout>
 </template>
 
 <script setup lang="ts">
 import { PropType } from "vue";
-
-import Layout from "./_layout.vue";
 
 const props = defineProps({
 	cols: {
@@ -46,11 +46,13 @@ defineExpose({ props });
 <style>
 .slidev-layout.items {
 	.slot-items {
-		font-size: 1rem;
-
 		& > svg,
 		& > div > svg {
-			@apply w-full h-16 mb-4;
+			@apply w-full h-16;
+		}
+
+		& > div > svg ~ * {
+			@apply mt-4;
 		}
 	}
 }

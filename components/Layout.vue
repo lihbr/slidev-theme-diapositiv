@@ -1,3 +1,4 @@
+<!-- HEALTH:MID layout -->
 <template>
 	<themify as="section" class="h-full relative flex items-stretch">
 		<!-- pip-off -->

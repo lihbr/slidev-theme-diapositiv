@@ -1,3 +1,4 @@
+<!-- HEALTH:HIGH footnote -->
 <template>
 	<footer
 		class="

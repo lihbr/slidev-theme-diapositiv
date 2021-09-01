@@ -1,3 +1,4 @@
+<!-- HEALTH:HIGH sections -->
 <template>
 	<layout class="sections flex gap-6">
 		<div class="left" :style="{ flex: props.left }">
@@ -11,8 +12,6 @@
 
 <script setup lang="ts">
 import { PropType } from "vue";
-
-import Layout from "./_layout.vue";
 
 const props = defineProps({
 	left: {
