@@ -54,6 +54,7 @@ import { PropType } from "vue";
 
 import { usePip } from "../composables/usePip";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Themify from "../components/Themify.vue";
 
 const props = defineProps({
