@@ -57,7 +57,7 @@ defineExpose({ props });
 		}
 
 		& > div > svg ~ * {
-			@apply mt-4;
+			@apply mt-6;
 		}
 	}
 }

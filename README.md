@@ -1,6 +1,7 @@
 <!--
 
-TODO: Replace all on all files:
+Replace all on all files:
+
 - slidev-theme-diapositiv
 - Diapositiv Slidev theme
 - lihbr/slidev-theme-diapositiv

@@ -46,6 +46,7 @@ html {
 		& > svg:first-child,
 		& > p > svg:first-child {
 			@apply inline;
+			margin-right: 0.4em;
 		}
 	}
 
