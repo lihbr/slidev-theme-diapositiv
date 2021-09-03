@@ -42,6 +42,11 @@ html {
 
 	li {
 		@apply ml-1.1em pl-0.2em leading-1.8em;
+
+		& > svg:first-child,
+		& > p > svg:first-child {
+			@apply inline;
+		}
 	}
 
 	table {
@@ -59,5 +64,30 @@ html {
 	td,
 	th {
 		@apply p-2 py-3;
+	}
+
+	img,
+	svg {
+		max-height: 420px;
+	}
+}
+
+html:not(.dark) {
+	.dark-only,
+	img[src$="-dark.png"],
+	img[src$="-dark.jpg"],
+	img[src$="-dark.gif"],
+	img[src$="-dark.svg"] {
+		@apply hidden;
+	}
+}
+
+html.dark {
+	.light-only,
+	img[src$="-light.png"],
+	img[src$="-light.jpg"],
+	img[src$="-light.gif"],
+	img[src$="-light.svg"] {
+		@apply hidden;
 	}
 }

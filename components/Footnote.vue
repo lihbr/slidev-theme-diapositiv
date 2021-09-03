@@ -11,7 +11,7 @@
 			w-full
 			text-xs
 			font-300
-			text-cream-100
+			text-slate-50 text-left
 			hover:text-slate
 			dark:(text-slate-100
 			hover:text-cream)

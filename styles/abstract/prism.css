@@ -50,18 +50,8 @@ pre .line::before {
 }
 
 :not(pre) > code {
-	@apply font-light py-0.5 rounded;
+	@apply font-light p-0.5 rounded;
 	font-size: 0.8em;
 	background: var(--prism-background);
 	color: var(--prism-foreground);
-}
-
-:not(pre) > code::before,
-:not(pre) > code::after {
-	content: "`";
-	opacity: 0.5;
-}
-
-:not(pre) > code::before {
-	margin-right: -0.08em;
 }

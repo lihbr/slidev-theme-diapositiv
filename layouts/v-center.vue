@@ -4,14 +4,14 @@
 		<div class="absolute top-12 left-12">
 			<slot name="before" />
 		</div>
-		<div class="self-center w-full">
+		<div class="slot-default self-center w-full">
 			<slot />
 		</div>
 	</layout>
 </template>
 
 <style>
-.slidev-layout.v-center:not(.pip-large):not(.text-center) {
+.slidev-layout.v-center:not(.pip-large):not(.text-center) .slot-default {
 	h1,
 	h2,
 	h3,

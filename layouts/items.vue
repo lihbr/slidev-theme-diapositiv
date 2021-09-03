@@ -6,16 +6,17 @@
 				class="mb-4"
 				:class="{ 'absolute top-12 left-12': props.fixed }"
 			>
-				<slot />
+				<slot name="before" />
 			</figcaption>
 			<div
 				class="slot-items grid gap-x-6 gap-y-12 text-center"
+				:class="{ 'items-center': props.centered }"
 				:style="{
 					gridTemplateColumns: `repeat(${props.cols}, 1fr)`,
 					gridTemplateRows: `repeat(${props.rows}, 1fr)`,
 				}"
 			>
-				<slot name="items" />
+				<slot />
 			</div>
 		</figure>
 		<slot name="after" />
@@ -37,6 +38,10 @@ const props = defineProps({
 	fixed: {
 		type: Boolean as PropType<boolean>,
 		default: true,
+	},
+	centered: {
+		type: Boolean as PropType<boolean>,
+		default: false,
 	},
 });
 

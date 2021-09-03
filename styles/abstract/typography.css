@@ -5,46 +5,64 @@
 
 	/* Headings */
 	h1,
+	.heading-h1,
 	h2,
+	.heading-h2,
 	h3,
+	.heading-h3,
 	h4,
+	.heading-h4,
 	h5,
-	h6 {
+	.heading-h5,
+	h6,
+	.heading-h6 {
 		@apply font-700 text-$slidev-theme-primary;
 		font-feature-settings: initial;
 		line-height: 1.125;
 	}
 
-	h1 {
+	h1,
+	.heading-h1 {
 		@apply pb-4;
 		font-size: 5rem; /* 80px */
 	}
-	h2 {
+	h2,
+	.heading-h2 {
 		@apply pb-4;
 		font-size: 3.75rem; /* 60px */
 	}
-	h3 {
+	h3,
+	.heading-h3 {
 		@apply pb-2;
 		font-size: 2.5rem; /* 40px */
 	}
-	h4 {
+	h4,
+	.heading-h4 {
 		@apply pb-2;
 		font-size: 1.875rem; /* 30px */
 	}
 
 	&.pip-large {
-		h1 {
+		h1,
+		.heading-h1 {
 			font-size: 3.75rem; /* 60px */
 		}
-		h2 {
+		h2,
+		.heading-h2 {
 			font-size: 2.5rem; /* 40px */
 		}
-		h3 {
+		h3,
+		.heading-h3 {
 			font-size: 1.875rem; /* 30px */
 		}
-		h4 {
+		h4,
+		.heading-h4 {
 			font-size: 1.5rem; /* 24px */
 		}
+	}
+
+	.heading-reset {
+		@apply text-inherit pb-0;
 	}
 
 	/* Spans */
@@ -54,11 +72,46 @@
 	}
 
 	a {
-		@apply border-current border-b border-dashed hover:(text-$slidev-theme-primary border-solid);
+		@apply pb-px border-current border-b border-dashed hover:(text-$slidev-theme-primary border-solid);
 	}
 
 	blockquote {
-		@apply text-sm px-2 py-1 bg-cream text-slate dark:(bg-slate text-cream) border-$slidev-theme-primary border-l-2;
+		@apply p-4 my-4 relative italic;
+
+		&::before {
+			@apply bottom-full right-full -mr-6 -mb-4;
+			content: "“";
+		}
+
+		&::after {
+			@apply top-full left-full -ml-8;
+			content: "”";
+		}
+
+		&::before,
+		&::after {
+			@apply absolute text-$slidev-theme-primary border-solid;
+			line-height: 0;
+			font-size: 5rem; /* 80px */
+		}
+
+		& ~ p > small:only-child {
+			@apply block text-right;
+		}
+	}
+
+	&:not(.pip-large) blockquote {
+		@apply mx-auto;
+		max-width: 75%;
+
+		& ~ p > small:only-child {
+			@apply mx-auto;
+			max-width: 75%;
+		}
+	}
+
+	small {
+		font-size: 1rem;
 	}
 
 	kbd {
