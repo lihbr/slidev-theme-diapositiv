@@ -19,15 +19,9 @@ Replace all on all files:
 
 Diapositiv [Slidev][slidev] theme.
 
-<!--
-
-TODO: Create a small list of package features:
-
-- 🤔 &nbsp;A useful feature;
-- 🥴 &nbsp;Another useful feature;
-- 🙃 &nbsp;A final useful feature.
-
- -->
+- 🟡🟦🔺 &nbsp;Made for [Slidev][slidev];
+- 📹 &nbsp;PIP incrustation mode;
+- 🎨 &nbsp;Colorful @lihbr theme.
 
 ## Install
 
