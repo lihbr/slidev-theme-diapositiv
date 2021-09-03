@@ -14,6 +14,17 @@
 	"license": "MIT",
 	"author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
 	"type": "module",
+	"files": [
+		"components",
+		"composables",
+		"fonts",
+		"layouts",
+		"playground",
+		"public",
+		"setup",
+		"styles",
+		"index.html"
+	],
 	"scripts": {
 		"dev": "slidev playground/slides.md",
 		"build": "slidev build playground/slides.md",
