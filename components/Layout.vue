@@ -3,8 +3,8 @@
 	<themify as="section" class="h-full relative flex items-stretch">
 		<!-- pip-off -->
 		<div
-			v-if="!dev || !['small', 'large'].includes($slidev.themeConfigs.pip)"
-			class="slidev-layout pip-off w-full relative p-12"
+			v-if="current === 'off'"
+			class="slidev-layout pip-off w-full relative p-12 max-h-full"
 			:class="props.class"
 		>
 			<slot />
@@ -13,11 +13,11 @@
 		<template v-else>
 			<!-- slide -->
 			<div
-				class="slidev-layout pip-on relative p-12"
+				class="slidev-layout pip-on relative p-12 max-h-full"
 				:class="[
 					{
-						'pip-small w-full': $slidev.themeConfigs.pip === 'small',
-						'pip-large w-3/5': $slidev.themeConfigs.pip === 'large',
+						'pip-small w-full': current === 'small',
+						'pip-large w-3/5': current === 'large',
 					},
 					props.class,
 				]"
@@ -28,7 +28,7 @@
 			<!-- pip-large -->
 			<figure
 				class="w-2/5 bg-$slidev-theme-primary"
-				v-if="$slidev.themeConfigs.pip === 'large'"
+				v-if="current === 'large'"
 			></figure>
 
 			<!-- pip-small -->
@@ -39,7 +39,7 @@
 					right-4
 					border-b-16 border-$slidev-theme-primary
 				"
-				v-if="$slidev.themeConfigs.pip === 'small'"
+				v-if="current === 'small'"
 			>
 				<svg width="240" height="135">
 					<rect width="240" height="135" />
@@ -52,9 +52,9 @@
 <script setup lang="ts">
 import { PropType } from "vue";
 
-import Themify from "../components/Themify.vue";
+import { usePip } from "../composables/usePip";
 
-const dev = process.env.NODE_ENV === "development";
+import Themify from "../components/Themify.vue";
 
 const props = defineProps({
 	class: {
@@ -63,5 +63,7 @@ const props = defineProps({
 	},
 });
 
-defineExpose({ dev, props });
+const { current } = usePip();
+
+defineExpose({ props, current });
 </script>
