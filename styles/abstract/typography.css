@@ -120,16 +120,3 @@
 		@apply bg-slate-100 bg-opacity-5 py-0.5 px-1 text-xs font-mono;
 	}
 }
-
-/* Not supported yet */
-div:has(> .slidev-info-dialog) {
-	@apply !rounded-none;
-}
-
-.slidev-info-dialog {
-	@apply !gap-2 !pb-2;
-
-	strong {
-		@apply font-700 text-$slidev-theme-primary;
-	}
-}

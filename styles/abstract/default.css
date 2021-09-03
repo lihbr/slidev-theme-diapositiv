@@ -92,3 +92,17 @@ html.dark {
 		@apply hidden;
 	}
 }
+
+/* Not supported yet */
+div:has(> .slidev-info-dialog) {
+	@apply !rounded-none;
+}
+
+.slidev-info-dialog {
+	@apply !gap-2 !pb-2;
+	max-width: 480px;
+
+	strong {
+		@apply font-700 text-$slidev-theme-primary;
+	}
+}
