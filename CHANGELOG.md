@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.0.2...v0.0.3) (2021-09-03)
+
+
+### Chore
+
+* add vue to linter ([e9a6069](https://github.com/lihbr/slidev-theme-diapositiv/commit/e9a60696bec13cde9262957624e1abe46a6caf05))
+* clean index.html ([94be7c8](https://github.com/lihbr/slidev-theme-diapositiv/commit/94be7c858c137031340703f6b39128457e429a2d))
+
+
+### Refactor
+
+* move info dialog css to defaults ([6f9c48a](https://github.com/lihbr/slidev-theme-diapositiv/commit/6f9c48a10648af78aa3d020dac529485cd857c7c))
+
 ### [0.0.2](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.0.1...v0.0.2) (2021-09-03)
 
 
