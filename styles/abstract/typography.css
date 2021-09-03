@@ -15,7 +15,8 @@
 	h5,
 	.heading-h5,
 	h6,
-	.heading-h6 {
+	.heading-h6,
+	.themified {
 		@apply font-700 text-$slidev-theme-primary;
 		font-feature-settings: initial;
 		line-height: 1.125;
@@ -117,5 +118,18 @@
 	kbd {
 		@apply border border-slate-100 border-b-2 border-opacity-20 rounded;
 		@apply bg-slate-100 bg-opacity-5 py-0.5 px-1 text-xs font-mono;
+	}
+}
+
+/* Not supported yet */
+div:has(> .slidev-info-dialog) {
+	@apply !rounded-none;
+}
+
+.slidev-info-dialog {
+	@apply !gap-2 !pb-2;
+
+	strong {
+		@apply font-700 text-$slidev-theme-primary;
 	}
 }
