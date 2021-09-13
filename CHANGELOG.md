@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.0.3...v0.0.4) (2021-09-13)
+
+
+### Features
+
+* bump slidev ([16aa57d](https://github.com/lihbr/slidev-theme-diapositiv/commit/16aa57decd3cc57cc445ecc5a52727ede6a96fd8))
+
 ### [0.0.3](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.0.2...v0.0.3) (2021-09-03)
 
 
