@@ -1,6 +1,7 @@
 # custom
 dist
 slides-export
+components.d.ts
 
 # os
 .DS_Store

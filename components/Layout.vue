@@ -33,12 +33,7 @@
 
 			<!-- pip-small -->
 			<figure
-				class="
-					absolute
-					bottom-4
-					right-4
-					border-b-16 border-$slidev-theme-primary
-				"
+				class="absolute bottom-4 right-4 border-b-16 border-$slidev-theme-primary"
 				v-if="current === 'small'"
 			>
 				<svg width="240" height="135">
