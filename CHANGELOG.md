@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.0.4...v0.1.0) (2022-05-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** upgrade dependencies
+
+### Chore
+
+* **deps:** upgrade dependencies ([e2cde8f](https://github.com/lihbr/slidev-theme-diapositiv/commit/e2cde8f3b5797985bab990b7777b53dd801e4dbc))
+
 ### [0.0.4](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.0.3...v0.0.4) (2021-09-13)
 
 
