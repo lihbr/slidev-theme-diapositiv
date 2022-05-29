@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.0...v0.1.1) (2022-05-29)
+
+
+### Chore
+
+* **deps:** maintain dependencies ([773c184](https://github.com/lihbr/slidev-theme-diapositiv/commit/773c184f0b5842e97f8441b3aafc3df8869f6a9d))
+* **deps:** remove icon libraries from package ([650ade7](https://github.com/lihbr/slidev-theme-diapositiv/commit/650ade7a5e27356b9f303c010d415603046d92fe))
+* update favicon ([5ac0113](https://github.com/lihbr/slidev-theme-diapositiv/commit/5ac0113b3723c5950ef246dbf437029ecdd35477))
+
 ## [0.1.0](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.0.4...v0.1.0) (2022-05-17)
 
 
