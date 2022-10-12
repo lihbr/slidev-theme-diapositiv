@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.1...v0.1.2) (2022-10-12)
+
+
+### Chore
+
+* **deps:** maintain dependencies ([bc16669](https://github.com/lihbr/slidev-theme-diapositiv/commit/bc166698836186da48d03307c1308557124464ae))
+* remove commitlint ([909852c](https://github.com/lihbr/slidev-theme-diapositiv/commit/909852ca928e23b5723f56c8b6326b6346631bde))
+
 ### [0.1.1](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.0...v0.1.1) (2022-05-29)
 
 
