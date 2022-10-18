@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.2...v0.1.3) (2022-10-18)
+
+
+### Bug Fixes
+
+* border color ([4fa460f](https://github.com/lihbr/slidev-theme-diapositiv/commit/4fa460f7a1d0917aac5a337d392e836b7c8ec564))
+
 ### [0.1.2](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.1...v0.1.2) (2022-10-12)
 
 
