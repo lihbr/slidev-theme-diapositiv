@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.3...v0.1.4) (2023-01-19)
+
+
+### Features
+
+* poll ([c2d6745](https://github.com/lihbr/slidev-theme-diapositiv/commit/c2d674509a799df59ba48253ea115259a9cf37b2))
+
+
+### Chore
+
+* maintain theme ([390b2b7](https://github.com/lihbr/slidev-theme-diapositiv/commit/390b2b789e058395fc881f27e85dd5c43c702288))
+
 ### [0.1.3](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.2...v0.1.3) (2022-10-18)
 
 
