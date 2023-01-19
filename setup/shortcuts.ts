@@ -1,7 +1,7 @@
 import {
+	type NavOperations,
+	type ShortcutOptions,
 	defineShortcutsSetup,
-	NavOperations,
-	ShortcutOptions,
 } from "@slidev/types";
 
 import { usePip } from "../composables/usePip";

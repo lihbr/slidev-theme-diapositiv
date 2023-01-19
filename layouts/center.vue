@@ -10,7 +10,7 @@
 	</layout>
 </template>
 
-<style>
+<style lang="pcss">
 .slidev-layout.center {
 	&:not(.pip-large) .slot-default {
 		h1,

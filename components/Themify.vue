@@ -1,12 +1,6 @@
 <!-- HEALTH:HIGH themify -->
-<template>
-	<component :is="props.as" :class="`theme-${current}`">
-		<slot />
-	</component>
-</template>
-
 <script setup lang="ts">
-import { PropType } from "vue";
+import { type PropType } from "vue";
 
 import { useRandomTheme } from "../composables/useRandomTheme";
 
@@ -21,3 +15,9 @@ const { current } = useRandomTheme();
 
 defineExpose({ props, current });
 </script>
+
+<template>
+	<component :is="props.as" :class="`theme-${current}`">
+		<slot />
+	</component>
+</template>

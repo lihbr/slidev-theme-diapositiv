@@ -1,4 +1,4 @@
-import { ref, Ref, computed } from "vue";
+import { type Ref, computed, ref } from "vue";
 // @ts-expect-error from slidev
 import configs from "/@slidev/configs";
 
@@ -26,6 +26,7 @@ export const usePip = (): {
 
 	const cycle = (): void => {
 		mode.value = pip[(pip.indexOf(mode.value) + 1) % pip.length];
+		// eslint-disable-next-line no-console
 		console.info("usePip.ts: cycled to mode `%s`", mode.value);
 	};
 

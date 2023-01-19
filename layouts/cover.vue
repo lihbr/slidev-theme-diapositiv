@@ -9,7 +9,7 @@
 	</layout>
 </template>
 
-<style>
+<style lang="pcss">
 .slidev-layout.cover {
 	h1,
 	h2,

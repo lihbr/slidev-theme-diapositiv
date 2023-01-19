@@ -1,6 +1,25 @@
 <!-- HEALTH:MID layout -->
+<script setup lang="ts">
+import { type PropType } from "vue";
+
+import { usePip } from "../composables/usePip";
+
+import Themify from "../components/Themify.vue";
+
+const props = defineProps({
+	class: {
+		type: String as PropType<string>,
+		default: "",
+	},
+});
+
+const { current } = usePip();
+
+defineExpose({ props, current });
+</script>
+
 <template>
-	<themify as="section" class="h-full relative flex items-stretch">
+	<Themify as="section" class="h-full relative flex items-stretch">
 		<!-- pip-off -->
 		<div
 			v-if="current === 'off'"
@@ -27,39 +46,19 @@
 
 			<!-- pip-large -->
 			<figure
-				class="w-2/5 bg-$slidev-theme-primary"
 				v-if="current === 'large'"
+				class="w-2/5 bg-$slidev-theme-primary"
 			></figure>
 
 			<!-- pip-small -->
 			<figure
-				class="absolute bottom-4 right-4 border-b-16 border-$slidev-theme-primary"
 				v-if="current === 'small'"
+				class="absolute bottom-4 right-4 border-b-16 border-$slidev-theme-primary"
 			>
 				<svg width="240" height="135">
 					<rect width="240" height="135" />
 				</svg>
 			</figure>
 		</template>
-	</themify>
+	</Themify>
 </template>
-
-<script setup lang="ts">
-import { PropType } from "vue";
-
-import { usePip } from "../composables/usePip";
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import Themify from "../components/Themify.vue";
-
-const props = defineProps({
-	class: {
-		type: String as PropType<string>,
-		default: "",
-	},
-});
-
-const { current } = usePip();
-
-defineExpose({ props, current });
-</script>

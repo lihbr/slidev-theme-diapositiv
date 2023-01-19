@@ -35,35 +35,34 @@
 		"release:dry": "standard-version --dry-run",
 		"release:alpha": "npm run build && npm run test && standard-version --release-as major --prerelease alpha && git push --follow-tags && npm run build && npm publish --tag alpha",
 		"release:alpha:dry": "standard-version --release-as major --prerelease alpha --dry-run",
-		"lint": "eslint --ext .js,.ts,.vue .",
+		"lint": "eslint --ext .js,.cjs,.ts .",
+		"types": "tsc --noEmit",
 		"unit": "echo \"Error: no test command specified\" && exit 0",
-		"test": "npm run lint && npm run unit"
+		"test": "npm run lint && npm run types && npm run build && npm run unit"
 	},
 	"engines": {
 		"node": ">=16.0.0",
-		"slidev": ">=0.36.6"
+		"slidev": ">=0.38.2"
 	},
 	"dependencies": {
-		"@slidev/types": "0.36.6",
+		"@slidev/types": "0.38.2",
 		"codemirror-theme-vars": "0.1.1",
-		"color": "4.2.3",
-		"prism-theme-vars": "0.2.4"
+		"prism-theme-vars": "0.2.4",
+		"qrcode-svg": "1.1.0"
 	},
 	"devDependencies": {
-		"@slidev/cli": "0.36.6",
-		"@types/color": "3.0.3",
-		"@typescript-eslint/eslint-plugin": "5.40.0",
-		"@typescript-eslint/parser": "5.40.0",
-		"@vue/eslint-config-typescript": "11.0.2",
-		"eslint": "8.25.0",
+		"@antfu/eslint-config": "0.34.0",
+		"@slidev/cli": "0.38.2",
+		"@types/node": "18.11.18",
+		"@types/qrcode-svg": "1.1.1",
+		"eslint": "8.31.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-prettier": "4.2.1",
-		"eslint-plugin-tsdoc": "0.2.17",
-		"eslint-plugin-vue": "9.6.0",
-		"husky": "8.0.1",
-		"playwright-chromium": "1.27.1",
-		"prettier": "2.7.1",
-		"standard-version": "9.5.0"
+		"husky": "8.0.2",
+		"playwright-chromium": "1.29.1",
+		"prettier": "2.8.1",
+		"standard-version": "9.5.0",
+		"typescript": "4.9.4"
 	},
 	"slidev": {
 		"colorSchema": "both",

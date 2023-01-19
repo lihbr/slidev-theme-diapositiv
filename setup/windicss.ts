@@ -1,8 +1,8 @@
-import { resolve } from "path";
+import { resolve } from "node:path";
 import { defineWindiSetup } from "@slidev/types";
-import Color from "color";
+
 const alpha = (hexa: string, alpha = 1): string =>
-	Color(hexa).alpha(alpha).rgb().toString();
+	`${hexa}${`0${Number(Math.round(255 * alpha)).toString(16)}`.slice(-2)}`;
 
 export default defineWindiSetup(() => ({
 	extract: {
@@ -42,7 +42,8 @@ export default defineWindiSetup(() => ({
 				current: "currentColor",
 				inherit: "inherit",
 				slate: {
-					DEFAULT: "#1e1919", // 800
+					"DEFAULT": "#1e1919", // 800
+					"900-o-75": alpha("#131010", 0.75),
 					900: "#131010",
 					700: "#292222",
 					600: "#342b2b",
@@ -50,7 +51,8 @@ export default defineWindiSetup(() => ({
 					50: "#806b6b",
 				},
 				cream: {
-					DEFAULT: "#fff7f7", // 800
+					"DEFAULT": "#fff7f7", // 800
+					"900-o-75": alpha("#fffefe", 0.75),
 					900: "#fffefe",
 					700: "#ffe9e9",
 					600: "#ffdbdb",
@@ -59,32 +61,32 @@ export default defineWindiSetup(() => ({
 				},
 				// o-20 used for tap highlight and inline code only
 				navy: {
-					DEFAULT: "#54669c",
+					"DEFAULT": "#54669c",
 					"o-20": alpha("#54669c", 0.2),
 					100: "#7284ba",
 				},
 				beet: {
-					DEFAULT: "#a54a5e",
+					"DEFAULT": "#a54a5e",
 					"o-20": alpha("#a54a5e", 0.2),
 					100: "#c3687c",
 				},
 				flamingo: {
-					DEFAULT: "#e84311",
+					"DEFAULT": "#e84311",
 					"o-20": alpha("#e84311", 0.2),
 					100: "#ff6129",
 				},
 				ochre: {
-					DEFAULT: "#f27502",
+					"DEFAULT": "#f27502",
 					"o-20": alpha("#f27502", 0.2),
 					100: "#ff9320",
 				},
 				butter: {
-					DEFAULT: "#ffb005",
+					"DEFAULT": "#ffb005",
 					"o-20": alpha("#ffb005", 0.2),
 					100: "#ffce23",
 				},
 				mantis: {
-					DEFAULT: "#759f53",
+					"DEFAULT": "#759f53",
 					"o-20": alpha("#759f53", 0.2),
 					100: "#93bd71",
 				},

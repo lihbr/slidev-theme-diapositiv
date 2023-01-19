@@ -1,4 +1,4 @@
-import { ref, Ref } from "vue";
+import { type Ref, ref } from "vue";
 
 enum Theme {
 	Navy = "navy",

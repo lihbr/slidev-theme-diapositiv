@@ -71,6 +71,10 @@ html {
 	svg {
 		max-height: 420px;
 	}
+
+	s {
+		text-decoration: theme("colors.cream.900-o-75") line-through;
+	}
 }
 
 html:not(.dark) {
@@ -90,6 +94,12 @@ html.dark {
 	img[src$="-light.gif"],
 	img[src$="-light.svg"] {
 		@apply hidden;
+	}
+
+	.slidev-layout {
+		s {
+			text-decoration: theme("colors.slate.900-o-75") line-through;
+		}
 	}
 }
 
