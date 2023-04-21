@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.4...v0.1.5) (2023-04-21)
+
+
+### Bug Fixes
+
+* force optimize `qrcode-svg` ([1121da5](https://github.com/lihbr/slidev-theme-diapositiv/commit/1121da54e6a7c951e60d199754a448ea1ab7cfd9))
+
+
+### Chore
+
+* **deps:** maintain dependencies ([0ae80d5](https://github.com/lihbr/slidev-theme-diapositiv/commit/0ae80d515a35c74cdf91fd7cf41704bbcd9f9963))
+
 ### [0.1.4](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.3...v0.1.4) (2023-01-19)
 
 
