@@ -2,19 +2,28 @@
 	"compilerOptions": {
 		"strict": true,
 		"skipLibCheck": true,
-
 		"target": "esnext",
 		"module": "esnext",
+		"noEmit": true,
 		"declaration": false,
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"allowSyntheticDefaultImports": true,
+		"allowImportingTsExtensions": true,
 		"esModuleInterop": true,
-
 		"forceConsistentCasingInFileNames": true,
 		"jsx": "preserve",
-		"lib": ["esnext", "dom"],
-		"types": ["node"]
+		"lib": [
+			"esnext",
+			"dom"
+		],
+		"types": [
+			"node"
+		]
 	},
-	"exclude": ["node_modules", "dist", "examples"]
+	"exclude": [
+		"node_modules",
+		"dist",
+		"examples"
+	]
 }

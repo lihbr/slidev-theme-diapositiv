@@ -14,6 +14,7 @@ module.exports = {
 		"@typescript-eslint/explicit-module-boundary-types": "error",
 		"@typescript-eslint/no-explicit-any": "error",
 		"@typescript-eslint/no-non-null-assertion": "error",
+		"antfu/top-level-function": "off",
 		"no-cond-assign": ["error", "except-parens"],
 		"no-fallthrough": "off",
 		"padding-line-between-statements": [

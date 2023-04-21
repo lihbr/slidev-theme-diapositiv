@@ -45,24 +45,24 @@
 		"slidev": ">=0.38.2"
 	},
 	"dependencies": {
-		"@slidev/types": "0.38.2",
-		"codemirror-theme-vars": "0.1.1",
+		"@slidev/types": "0.40.14",
+		"codemirror-theme-vars": "0.1.2",
 		"prism-theme-vars": "0.2.4",
 		"qrcode-svg": "1.1.0"
 	},
 	"devDependencies": {
-		"@antfu/eslint-config": "0.34.0",
-		"@slidev/cli": "0.38.2",
-		"@types/node": "18.11.18",
+		"@antfu/eslint-config": "0.38.5",
+		"@slidev/cli": "0.40.14",
+		"@types/node": "18.15.13",
 		"@types/qrcode-svg": "1.1.1",
-		"eslint": "8.31.0",
-		"eslint-config-prettier": "8.5.0",
+		"eslint": "8.38.0",
+		"eslint-config-prettier": "8.8.0",
 		"eslint-plugin-prettier": "4.2.1",
-		"husky": "8.0.2",
-		"playwright-chromium": "1.29.1",
-		"prettier": "2.8.1",
+		"husky": "8.0.3",
+		"playwright-chromium": "1.32.3",
+		"prettier": "2.8.7",
 		"standard-version": "9.5.0",
-		"typescript": "4.9.4"
+		"typescript": "5.0.4"
 	},
 	"slidev": {
 		"colorSchema": "both",
