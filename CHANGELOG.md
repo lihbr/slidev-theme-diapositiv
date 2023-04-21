@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.5...v0.1.6) (2023-04-21)
+
+
+### Bug Fixes
+
+* add missing file to published artifact ([ac2e888](https://github.com/lihbr/slidev-theme-diapositiv/commit/ac2e8884424b25b48dc975420f5c881b1a92cb90))
+
 ### [0.1.5](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.4...v0.1.5) (2023-04-21)
 
 
