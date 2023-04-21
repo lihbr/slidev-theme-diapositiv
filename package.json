@@ -23,7 +23,8 @@
 		"public",
 		"setup",
 		"styles",
-		"index.html"
+		"index.html",
+		"vite.config.ts"
 	],
 	"scripts": {
 		"dev": "slidev playground/slides.md",
