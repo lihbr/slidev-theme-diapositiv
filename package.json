@@ -42,28 +42,28 @@
 		"test": "npm run lint && npm run types && npm run build && npm run unit"
 	},
 	"engines": {
-		"node": ">=16.0.0",
-		"slidev": ">=0.38.2"
+		"node": ">=20.0.0",
+		"slidev": ">=0.43.0"
 	},
 	"dependencies": {
-		"@slidev/types": "0.40.14",
+		"@slidev/types": "0.43.7",
 		"codemirror-theme-vars": "0.1.2",
 		"prism-theme-vars": "0.2.4",
 		"qrcode-svg": "1.1.0"
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "0.38.5",
-		"@slidev/cli": "0.40.14",
-		"@types/node": "18.15.13",
-		"@types/qrcode-svg": "1.1.1",
-		"eslint": "8.38.0",
+		"@slidev/cli": "0.43.7",
+		"@types/node": "20.8.5",
+		"@types/qrcode-svg": "1.1.2",
+		"eslint": "8.51.0",
 		"eslint-config-prettier": "8.8.0",
 		"eslint-plugin-prettier": "4.2.1",
 		"husky": "8.0.3",
-		"playwright-chromium": "1.32.3",
+		"playwright-chromium": "1.39.0",
 		"prettier": "2.8.7",
 		"standard-version": "9.5.0",
-		"typescript": "5.0.4"
+		"typescript": "5.2.2"
 	},
 	"slidev": {
 		"colorSchema": "both",
@@ -74,7 +74,8 @@
 			"fonts": {
 				"sans": "Graphit, Roboto",
 				"local": "Graphit"
-			}
+			},
+			"css": "windicss"
 		}
 	}
 }
