@@ -16,7 +16,7 @@ const poll = async (id: string): Promise<void> => {
 		try {
 			// eslint-disable-next-line no-console
 			console.info(`Fetching results for poll \`${id}\``);
-			const res = await fetch(`https://staging.lihbr.com/api/poll?id=${id}`);
+			const res = await fetch(`https://lihbr.com/api/poll?id=${id}`);
 			const json = (await res.json()) as {
 				id: string;
 				results: Record<string, number>;
