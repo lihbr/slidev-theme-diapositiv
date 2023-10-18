@@ -9,9 +9,8 @@ const isPolling = (id: string) => {
 
 const poll = async (id: string): Promise<void> => {
 	if (
-		window.document.hasFocus() &&
-		(document.location.host === "localhost:3030" ||
-			window.localStorage.poll === "true")
+		document.location.host === "localhost:3030" ||
+		(window.document.hasFocus() && window.localStorage.poll === "true")
 	) {
 		try {
 			// eslint-disable-next-line no-console

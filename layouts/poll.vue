@@ -1,7 +1,7 @@
 <!-- HEALTH:MID poll -->
 <script setup lang="ts">
 import { injectionSlidevContext } from "@slidev/client/constants.ts";
-import { type PropType, inject, onUnmounted, watch } from "vue";
+import { type PropType, inject, onUnmounted, unref, watch } from "vue";
 
 import { usePoll } from "../composables/usePoll";
 
@@ -24,8 +24,7 @@ watch(
 	() => ctx.nav.route,
 	() => {
 		if (
-			ctx.nav.currentLayout === "poll" &&
-			// @ts-expect-error - Missing type
+			unref(ctx.nav.currentLayout) === "poll" &&
 			ctx.nav.route?.meta?.slide?.frontmatter?.id === props.id
 		) {
 			start();
@@ -49,17 +48,18 @@ defineExpose({ props });
 		<div
 			class="slot-default self-center w-full grid gap-x-6 text-center mt-6"
 			:style="{
-					gridTemplateColumns: `repeat(${props.choices.length}, 1fr)`,
-				}">
+				gridTemplateColumns: `repeat(${props.choices.length}, 1fr)`,
+			}"
+		>
 			<slot />
 		</div>
 		<div
 			class="self-center w-full grid gap-x-6 text-center mt-6"
 			:style="{
-					gridTemplateColumns: `repeat(${props.choices.length}, 1fr)`,
-				}">
-			<h3 v-for="choice in choices"
-				:key="choice">
+				gridTemplateColumns: `repeat(${props.choices.length}, 1fr)`,
+			}"
+		>
+			<h3 v-for="choice in choices" :key="choice">
 				{{ results[choice] || 0 }}
 			</h3>
 		</div>
