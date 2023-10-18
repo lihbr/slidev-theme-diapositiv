@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.7...v0.1.8) (2023-10-18)
+
+
+### Bug Fixes
+
+* poll in presenter mode ([34e2cd5](https://github.com/lihbr/slidev-theme-diapositiv/commit/34e2cd5a0771c36d8fbef020220f62fe3404305e))
+
 ### [0.1.7](https://github.com/lihbr/slidev-theme-diapositiv/compare/v0.1.6...v0.1.7) (2023-10-13)
 
 
