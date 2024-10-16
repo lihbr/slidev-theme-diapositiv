@@ -1,118 +1,36 @@
-:root {
-	--slidev-theme-primary: theme("colors.flamingo.DEFAULT");
-}
-
 html {
-	scrollbar-width: thin;
-	scrollbar-color: theme("colors.flamingo.DEFAULT") transparent;
-	-webkit-tap-highlight-color: theme("colors.flamingo.o-20");
-}
+	@apply antialiased box-border overflow-x-hidden;
+	color-scheme: light;
 
-::-webkit-scrollbar {
-	width: 8px;
-	height: 8px;
-}
-::-webkit-scrollbar-corner {
-	background: transparent;
-}
-
-::selection,
-::-webkit-scrollbar-thumb {
-	color: theme("colors.cream.900");
-	background: theme("colors.flamingo.DEFAULT");
-}
-
-.CodeMirror.CodeMirror-wrap {
-	overflow: hidden;
-}
-
-.slidev-layout {
-	pre,
-	code {
-		@apply select-text;
+	&, & .layout {
+		@apply text-slate bg-cream-900;
 	}
 
-	ul {
-		list-style: square;
-	}
-
-	ol {
-		list-style: decimal;
-	}
-
-	li {
-		@apply ml-1.1em pl-0.2em leading-1.8em;
-
-		& > svg:first-child,
-		& > p > svg:first-child {
-			@apply inline;
-			margin-right: 0.4em;
+	&, & * {
+		scrollbar-width: thin;
+		& ::-webkit-scrollbar {
+			width: .5rem;
+			height: .5rem;
 		}
 	}
-
-	table {
-		@apply w-full;
+	& ::-webkit-scrollbar-corner {
+		background: transparent;
 	}
 
-	tr {
-		@apply border-b border-slate dark:(border-cream) border-opacity-20;
+  scrollbar-color: var(--color-theme) transparent;
+	-webkit-tap-highlight-color: var(--color-theme-o-20);
+	& ::selection,
+	& ::-webkit-scrollbar-thumb {
+		@apply text-cream-900 bg-theme;
 	}
 
-	th {
-		@apply text-left font-400;
-	}
+	&.dark, &.dark .layout {
+		@apply text-cream bg-slate-900;
+		color-scheme: dark;
 
-	td,
-	th {
-		@apply p-2 py-3;
-	}
-
-	img,
-	svg {
-		max-height: 420px;
-	}
-
-	s {
-		text-decoration: theme("colors.cream.900-o-75") line-through;
-	}
-}
-
-html:not(.dark) {
-	.dark-only,
-	img[src$="-dark.png"],
-	img[src$="-dark.jpg"],
-	img[src$="-dark.gif"],
-	img[src$="-dark.svg"] {
-		@apply hidden;
-	}
-}
-
-html.dark {
-	.light-only,
-	img[src$="-light.png"],
-	img[src$="-light.jpg"],
-	img[src$="-light.gif"],
-	img[src$="-light.svg"] {
-		@apply hidden;
-	}
-
-	.slidev-layout {
-		s {
-			text-decoration: theme("colors.slate.900-o-75") line-through;
+		& ::selection,
+		& ::-webkit-scrollbar-thumb {
+			@apply text-slate-900;
 		}
-	}
-}
-
-/* Not supported yet */
-div:has(> .slidev-info-dialog) {
-	@apply !rounded-none;
-}
-
-.slidev-info-dialog {
-	@apply !gap-2 !pb-2;
-	max-width: 480px;
-
-	strong {
-		@apply font-700 text-$slidev-theme-primary;
 	}
 }

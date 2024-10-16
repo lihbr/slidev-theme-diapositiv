@@ -1,0 +1,53 @@
+name: release
+
+permissions:
+  contents: write
+  id-token: write
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Build
+        run: pnpm build
+
+      - name: Publish ${{ env.GITHUB_REF_NAME }}
+        run: |
+          if [[ $GITHUB_REF_NAME == *-* ]]; then
+            TAG=${GITHUB_REF_NAME#*-}
+            TAG=${TAG%.*}
+            pnpm publish --access public --no-git-checks --tag ${TAG}
+          else
+            pnpm publish --access public --no-git-checks
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.RELEASE_NODE_AUTH_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+
+      - name: Publish GitHub release
+        run: |
+          if [[ $GITHUB_REF_NAME == *-* ]]; then
+            npx changelogithub --prerelease
+          else
+            npx changelogithub
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

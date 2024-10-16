@@ -1,29 +1,14 @@
 {
 	"compilerOptions": {
-		"strict": true,
-		"skipLibCheck": true,
 		"target": "esnext",
+		"lib": ["dom", "esnext"],
 		"module": "esnext",
-		"noEmit": true,
-		"declaration": false,
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"resolveJsonModule": true,
-		"allowSyntheticDefaultImports": true,
-		"allowImportingTsExtensions": true,
+		"strict": true,
+		"strictNullChecks": true,
 		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"jsx": "preserve",
-		"lib": [
-			"esnext",
-			"dom"
-		],
-		"types": [
-			"node"
-		]
-	},
-	"exclude": [
-		"node_modules",
-		"dist",
-		"examples"
-	]
+		"skipDefaultLibCheck": true,
+		"skipLibCheck": true
+	}
 }

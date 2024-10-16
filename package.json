@@ -1,81 +1,69 @@
 {
 	"name": "slidev-theme-diapositiv",
+	"type": "module",
 	"version": "0.1.8",
+	"packageManager": "pnpm@9.12.1",
 	"description": "Diapositiv Slidev theme",
+	"author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
+	"license": "MIT",
+	"homepage": "https://github.com/lihbr/slidev-theme-diapositiv",
+	"repository": {
+		"type": "git",
+		"url": "ssh://git@github.com/lihbr/slidev-theme-diapositiv.git"
+	},
 	"keywords": [
 		"lihbr",
 		"slidev-theme",
 		"slidev"
 	],
-	"repository": {
-		"type": "git",
-		"url": "ssh://git@github.com/lihbr/slidev-theme-diapositiv.git"
-	},
-	"license": "MIT",
-	"author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
-	"type": "module",
 	"files": [
 		"components",
 		"composables",
-		"fonts",
+		"index.html",
 		"layouts",
-		"playground",
-		"public",
 		"setup",
 		"styles",
-		"index.html",
-		"vite.config.ts"
+		"uno.config.ts"
 	],
-	"scripts": {
-		"dev": "slidev playground/slides.md",
-		"build": "cd playground && slidev build",
-		"export": "cd playground && slidev export",
-		"screenshot": "slidev export playground/slides.md --format png",
-		"prepare": "husky install",
-		"release": "npm run build && npm run test && standard-version && git push --follow-tags && npm run build && npm publish",
-		"release:dry": "standard-version --dry-run",
-		"release:alpha": "npm run build && npm run test && standard-version --release-as major --prerelease alpha && git push --follow-tags && npm run build && npm publish --tag alpha",
-		"release:alpha:dry": "standard-version --release-as major --prerelease alpha --dry-run",
-		"lint": "eslint --ext .js,.cjs,.ts .",
-		"types": "tsc --noEmit",
-		"unit": "echo \"Error: no test command specified\" && exit 0",
-		"test": "npm run lint && npm run types && npm run build && npm run unit"
-	},
 	"engines": {
-		"node": ">=20.0.0",
-		"slidev": ">=0.43.0"
+		"node": ">=22.0.0"
+	},
+	"scripts": {
+		"build": "slidev build example.md",
+		"dev": "slidev example.md",
+		"export": "slidev export example.md",
+		"screenshot": "slidev export example.md --format png",
+		"release": "npm run test && bumpp",
+		"release:dry": "npx changelogithub --dry",
+		"lint": "eslint .",
+		"typecheck": "tsc --noEmit",
+		"unit": "exit 0",
+		"test": "pnpm lint && pnpm typecheck && pnpm unit && pnpm build"
 	},
 	"dependencies": {
-		"@slidev/types": "0.43.7",
-		"codemirror-theme-vars": "0.1.2",
-		"prism-theme-vars": "0.2.4",
-		"qrcode-svg": "1.1.0"
+		"@fontsource/geist-mono": "^5.1.0",
+		"@slidev/types": "^0.50.0-beta.3",
+		"uqr": "^0.1.2"
 	},
 	"devDependencies": {
-		"@antfu/eslint-config": "0.38.5",
-		"@slidev/cli": "0.43.7",
-		"@types/node": "20.8.5",
-		"@types/qrcode-svg": "1.1.2",
-		"eslint": "8.51.0",
-		"eslint-config-prettier": "8.8.0",
-		"eslint-plugin-prettier": "4.2.1",
-		"husky": "8.0.3",
-		"playwright-chromium": "1.39.0",
-		"prettier": "2.8.7",
-		"standard-version": "9.5.0",
-		"typescript": "5.2.2"
+		"@lihbr/eslint-config": "^0.0.2",
+		"@slidev/cli": "^0.50.0-beta.3",
+		"bumpp": "^9.7.1",
+		"eslint": "^9.12.0",
+		"typescript": "^5.6.3"
 	},
 	"slidev": {
-		"colorSchema": "both",
-		"highlighter": "prism",
+		"colorSchema": "dark",
 		"defaults": {
-			"titleTemplate": "%s — Diapositiv",
-			"hightlighter": "prism",
+			"titleTemplate": "%s - Diapositiv",
+			"favicon": "https://lihbr.com/icon.png",
+			"canvasWidth": 1920,
+			"lineNumbers": true,
 			"fonts": {
-				"sans": "Graphit, Roboto",
-				"local": "Graphit"
-			},
-			"css": "windicss"
+				"sans": "Graphit, Graphit CLS",
+				"mono": "Geist Mono",
+				"provider": "none"
+			}
 		}
 	}
 }

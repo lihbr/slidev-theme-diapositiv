@@ -1,80 +1,39 @@
-<!-- HEALTH:MID poll -->
-<script setup lang="ts">
-import { injectionSlidevContext } from "@slidev/client/constants.ts";
-import { type PropType, inject, onUnmounted, unref, watch } from "vue";
+<script lang="ts" setup>
+import { onSlideEnter, onSlideLeave } from "@slidev/client"
+import { usePoll } from "../composables/usePoll"
 
-import { usePoll } from "../composables/usePoll";
+const props = defineProps<{
+	id: string
+	left: { id: string, href: string, label: string }
+	right: { id: string, href: string, label: string }
+}>()
 
-const props = defineProps({
-	id: {
-		type: String as PropType<string>,
-		required: true,
-	},
-	choices: {
-		type: Array as PropType<number[]>,
-		required: true,
-	},
-});
+const { start, stop, results } = usePoll(props.id)
 
-const { start, stop, results } = usePoll(props.id);
-
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const ctx = inject(injectionSlidevContext)!;
-watch(
-	() => ctx.nav.route,
-	() => {
-		if (
-			unref(ctx.nav.currentLayout) === "poll" &&
-			ctx.nav.route?.meta?.slide?.frontmatter?.id === props.id
-		) {
-			start();
-		} else {
-			stop();
-		}
-	},
-	{ immediate: true },
-);
-
-onUnmounted(() => {
-	stop();
-});
-
-defineExpose({ props });
+onSlideEnter(start)
+onSlideLeave(stop)
 </script>
 
 <template>
-	<layout class="poll">
-		<slot name="before" />
-		<div
-			class="slot-default self-center w-full grid gap-x-6 text-center mt-6"
-			:style="{
-				gridTemplateColumns: `repeat(${props.choices.length}, 1fr)`,
-			}"
-		>
+	<layout vfig class="poll grid grid-cols-3 items-center">
+		<qr-code :href="left.href" class="w-3/4 ml-auto">
+			{{ left.label }}
+		</qr-code>
+		<div class="px-8 space-y-8">
 			<slot />
+			<div class="flex justify-between">
+				<span class="heading-1">{{ results[left.id] || 0 }}</span>
+				<span class="heading-1">{{ results[right.id] || 0 }}</span>
+			</div>
 		</div>
-		<div
-			class="self-center w-full grid gap-x-6 text-center mt-6"
-			:style="{
-				gridTemplateColumns: `repeat(${props.choices.length}, 1fr)`,
-			}"
-		>
-			<h3 v-for="choice in choices" :key="choice">
-				{{ results[choice] || 0 }}
-			</h3>
-		</div>
+		<qr-code :href="right.href" class="w-3/4 text-right">
+			{{ right.label }}
+		</qr-code>
 	</layout>
 </template>
 
-<style lang="pcss">
-.slidev-layout.poll:not(.pip-large):not(.text-center) .slot-default {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		max-width: 75%;
-	}
+<style scoped>
+:deep(.heading-h2), :deep(h2) {
+	@apply text-theme text-center
 }
 </style>
