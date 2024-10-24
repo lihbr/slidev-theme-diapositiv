@@ -19,12 +19,12 @@ html.font-feature-settings {
 	& .heading-2,
 	& .heading-3,
 	& .heading-4,
-	& .prose h1,
-	& .prose h2,
-	& .prose h3,
-	& .prose h4,
-	& .prose h5,
-	& .prose h6 {
+	& h1,
+	& h2,
+	& h3,
+	& h4,
+	& h5,
+	& h6 {
 		font-feature-settings: 'pnum' on, 'lnum' on;
 	}
 }
@@ -38,23 +38,34 @@ html.font-feature-settings {
 }
 
 .layout {
-	@apply font-normal text-[3rem] leading-[1.25];
+	@apply font-normal text-[3rem] leading-[1.2];
+}
+
+ul, ol {
+	@apply space-y-2;
+
+	& ul, & ol {
+		@apply mt-2
+	}
 }
 
 ul {
-	list-style-position: inside;
-  list-style-type: "-> ";
+	list-style-type: "-> ";
 }
 
 ol {
-  list-style-position: inside;
-  list-style-type: decimal;
+	list-style-type: decimal;
 }
+
+li {
+	@apply ml-12;
+}
+
+li > ul, li > ol {
+	@apply ml-16
+}
+
 
 code {
-  @apply text-[2.5rem] font-mono p-2 bg-slate z-10 relative;
-}
-
-.slidev-code code {
-	@apply text-[1.5rem] leading-[1.5] font-mono;
+	@apply text-[2.5rem] font-mono p-2 bg-slate z-10 relative;
 }

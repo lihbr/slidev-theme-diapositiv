@@ -1,5 +1,5 @@
 .slidev-code {
-	@apply !rounded-none bg-slate !p-4 relative z-10;
+	@apply !rounded-none !bg-slate !p-4 relative z-10;
 
 	& .line::before {
 		@apply !mr-12;

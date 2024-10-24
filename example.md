@@ -1,5 +1,13 @@
 ---
 theme: ./
+info: |
+  ## maintaining your company’s open-source ecosystem
+
+  or how to make great npm packages for the mere mortal
+
+  <br />
+
+  Everything from<br>this talk & more -^<br>[lucie.red/nuxtnation](https://lucie.red/nuxtnation)
 ---
 
 # maintaining your company’s open-source ecosystem
@@ -57,6 +65,8 @@ layout: interaction
 -> [lucie.red/nuxtnation](https://lucie.red/nuxtnation)
 
 ---
+centered: true
+---
 
 ![lille](https://images.prismic.io/lihbr/ZtybwhoQrfVKl0AD_240907-lille-0007.jpg?auto=format,compress)
 
@@ -66,6 +76,8 @@ layout: interaction
 
 ![lille](https://images.prismic.io/lihbr/ZtybwhoQrfVKl0AD_240907-lille-0007.jpg?auto=format,compress)
 
+---
+centered: true
 ---
 
 ![lille](https://images.prismic.io/lihbr/ZtybwhoQrfVKl0AD_240907-lille-0007.jpg?auto=format,compress)
@@ -150,3 +162,27 @@ Not straightforward to answer, but "basically":
 - `main`, `module`, and `exports` if you want (or need to) be compatible with most setup
 
 </v-clicks>
+
+---
+
+## What are Nuxt Modules?
+
+Nuxt Modules are registered inside your Nuxt config file:
+
+```typescript {all|5|6|1,7|8-11|5,14}
+import thirdModule from "third-module"
+
+export default defineNuxtConfig({
+	modules: [
+		"@vite-pwa/nuxt",
+		"~/modules/my-module",
+		thirdModule,
+		[
+			"@nuxtjs/prismic",
+			{ endpoint: "example" }
+		],
+	],
+
+	pwa: { writePlugin: false }
+})
+```

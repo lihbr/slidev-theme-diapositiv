@@ -23,7 +23,8 @@
 		"layouts",
 		"setup",
 		"styles",
-		"uno.config.ts"
+		"uno.config.ts",
+		"vite.config.ts"
 	],
 	"engines": {
 		"node": ">=22.0.0"
@@ -41,13 +42,15 @@
 		"test": "pnpm lint && pnpm typecheck && pnpm unit && pnpm build"
 	},
 	"dependencies": {
+		"@fontsource-variable/m-plus-1": "^5.1.0",
 		"@fontsource/geist-mono": "^5.1.0",
-		"@slidev/types": "^0.50.0-beta.3",
+		"@slidev/types": "^0.50.0-beta.4",
+		"theme-farben": "^0.0.2",
 		"uqr": "^0.1.2"
 	},
 	"devDependencies": {
-		"@lihbr/eslint-config": "^0.0.2",
-		"@slidev/cli": "^0.50.0-beta.3",
+		"@lihbr/eslint-config": "^0.0.3",
+		"@slidev/cli": "^0.50.0-beta.4",
 		"bumpp": "^9.7.1",
 		"eslint": "^9.12.0",
 		"typescript": "^5.6.3"
@@ -60,7 +63,7 @@
 			"canvasWidth": 1920,
 			"lineNumbers": true,
 			"fonts": {
-				"sans": "Graphit, Graphit CLS",
+				"sans": "Graphit, Graphit CLS, M PLUS 1 Variable",
 				"mono": "Geist Mono",
 				"provider": "none"
 			}

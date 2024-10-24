@@ -6,6 +6,7 @@ const props = defineProps<{
 	id: string
 	left: { id: string, href: string, label: string }
 	right: { id: string, href: string, label: string }
+	theme?: string
 }>()
 
 const { start, stop, results } = usePoll(props.id)
@@ -15,7 +16,7 @@ onSlideLeave(stop)
 </script>
 
 <template>
-	<layout vfig class="poll grid grid-cols-3 items-center">
+	<layout vfig :theme="theme" class="poll grid grid-cols-3 items-center">
 		<qr-code :href="left.href" class="w-3/4 ml-auto">
 			{{ left.label }}
 		</qr-code>

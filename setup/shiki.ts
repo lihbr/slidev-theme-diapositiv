@@ -1,11 +1,11 @@
 import type { ShikiSetupReturn } from "@slidev/types"
 import { defineShikiSetup } from "@slidev/types"
 
+import farben from "theme-farben/farben.json"
+
 export default defineShikiSetup((): ShikiSetupReturn => {
 	return {
-		themes: {
-			dark: "github-dark-default",
-			light: "vitesse-light",
-		},
+		// @ts-expect-error - Invalid inferred type from JSON
+		theme: farben,
 	}
 })

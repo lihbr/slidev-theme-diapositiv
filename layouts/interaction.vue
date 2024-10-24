@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed } from "vue"
 import { useSlideContext } from "@slidev/client"
+import { computed } from "vue"
 
 const props = defineProps<{
 	align?: "left" | "right"
+	theme?: string
 }>()
 
 const { $slidev } = useSlideContext()
@@ -16,6 +17,7 @@ const _align = computed(() => {
 <template>
 	<layout
 		hfig
+		:theme="theme"
 		class="interaction flex items-center justify-center"
 		:class="{
 			'text-right': _align === 'right',
