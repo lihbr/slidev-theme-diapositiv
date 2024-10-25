@@ -40,4 +40,12 @@ const _align = computed(() => {
 		@apply grid-col-start-2
 	}
 }
+
+.text-right.content-center :deep(p) {
+	@apply text-left;
+}
+
+.content-center:not(.text-right) :deep(p) {
+	@apply text-right;
+}
 </style>

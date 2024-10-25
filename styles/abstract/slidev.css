@@ -1,5 +1,13 @@
+.space-y-8 > .slidev-code-wrapper {
+	@apply !mt-8;
+}
+
 .slidev-code code {
 	@apply text-[1.5rem] leading-[1.5] font-mono p-0;
+}
+
+.code--large .slidev-code code {
+	@apply text-[2.5rem];
 }
 
 .slidev-info-dialog {
@@ -37,5 +45,13 @@
 		&, & div {
 			@apply text-[1rem] text-cream no-underline filter-grayscale;
 		}
+	}
+}
+
+.slidev-code-copy {
+	@apply z-10;
+
+	& svg {
+		@apply scale-200 -translate-x-4 -translate-y-2;
 	}
 }

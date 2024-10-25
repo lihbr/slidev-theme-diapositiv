@@ -65,7 +65,22 @@ li > ul, li > ol {
 	@apply ml-16
 }
 
-
 code {
-	@apply text-[2.5rem] font-mono p-2 bg-slate z-10 relative;
+	@apply text-[0.8333em] font-mono p-2 bg-slate z-10 relative;
+}
+
+blockquote {
+	@apply italic
+}
+
+blockquote + small {
+	@apply flex items-center gap-2 text-theme;
+
+	& hr {
+		@apply flex-1 border-theme;
+	}
+}
+
+blockquote.text-right + small {
+	@apply flex-row-reverse;
 }
