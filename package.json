@@ -2,7 +2,7 @@
 	"name": "slidev-theme-diapositiv",
 	"type": "module",
 	"version": "0.1.8",
-	"packageManager": "pnpm@9.12.1",
+	"packageManager": "pnpm@9.12.3",
 	"description": "Diapositiv Slidev theme",
 	"author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
 	"license": "MIT",
@@ -44,15 +44,15 @@
 	"dependencies": {
 		"@fontsource-variable/m-plus-1": "^5.1.0",
 		"@fontsource/geist-mono": "^5.1.0",
-		"@slidev/types": "^0.50.0-beta.4",
+		"@slidev/types": "^0.50.0-beta.5",
 		"theme-farben": "^0.0.2",
 		"uqr": "^0.1.2"
 	},
 	"devDependencies": {
 		"@lihbr/eslint-config": "^0.0.3",
-		"@slidev/cli": "^0.50.0-beta.4",
+		"@slidev/cli": "^0.50.0-beta.5",
 		"bumpp": "^9.7.1",
-		"eslint": "^9.12.0",
+		"eslint": "^9.13.0",
 		"typescript": "^5.6.3"
 	},
 	"slidev": {
