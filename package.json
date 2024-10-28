@@ -1,7 +1,7 @@
 {
 	"name": "slidev-theme-diapositiv",
 	"type": "module",
-	"version": "0.1.8",
+	"version": "1.0.0",
 	"packageManager": "pnpm@9.12.3",
 	"description": "Diapositiv Slidev theme",
 	"author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
