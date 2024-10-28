@@ -1,7 +1,4 @@
-# custom
 dist
-slides-export
-components.d.ts
 
 # os
 .DS_Store
@@ -21,11 +18,11 @@ yarn.lock
 
 # npm
 npm-debug.log*
+package-lock.json
 
 # tests
 coverage
 .eslintcache
-.nyc_output
 
 # .env
 .env

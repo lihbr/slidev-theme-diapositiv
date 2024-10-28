@@ -1,7 +1,9 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vite"
 
 export default defineConfig({
-	optimizeDeps: {
-		include: ["qrcode-svg"],
+	server: {
+		proxy: {
+			"^/assets/fonts/.*": "https://lihbr.com",
+		},
 	},
-});
+})

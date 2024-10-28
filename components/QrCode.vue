@@ -1,53 +1,24 @@
-<!-- HEALTH:HIGH qr-code -->
-<script setup lang="ts">
-import { type PropType, computed } from "vue";
-import QRCode from "qrcode-svg";
+<script lang="ts" setup>
+import { renderSVG } from "uqr"
+import { computed } from "vue"
 
-const props = defineProps({
-	content: {
-		type: String as PropType<string>,
-		required: true,
-	},
-	size: {
-		type: Number as PropType<number>,
-		default: 220,
-	},
-});
+const props = defineProps<{
+	href: string
+}>()
 
-const figureContent = computed(() => {
-	const svg = new QRCode({
-		content: props.content,
-		padding: 1,
-		width: props.size,
-		height: props.size,
-		color: "#131010",
-		background: "#fff7f7",
-		ecl: "M",
-		pretty: false,
-	}).svg();
-
-	return `${svg}
-<figcaption>
-	<a href="${props.content}" target="_blank" rel="noopener noreferrer">
-		${props.content.replace("https://", "")}
-	</a>
-</figcaption>`;
-});
-
-defineExpose({ props });
+const qrCode = computed(() => {
+	return renderSVG(props.href, {
+		ecc: "M",
+		whiteColor: "#fff7f7",
+		blackColor: "#131010",
+	})
+})
 </script>
 
 <template>
-	<div class="qrcode">
+	<div class="qrcode flex flex-col gap-8">
+		<a :href="href" target="_blank" rel="noopener noreferrer">{{ href.replace("https://", "") }}</a>
+		<figure v-html="qrCode" />
 		<slot />
-		<figure v-html="figureContent"></figure>
 	</div>
 </template>
-
-<style lang="pcss">
-.qrcode {
-	figure svg {
-		@apply mx-auto my-3;
-	}
-}
-</style>

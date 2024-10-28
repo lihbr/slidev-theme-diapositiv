@@ -1,27 +1,11 @@
-<!--
-
-Replace all on all files:
-
-- slidev-theme-diapositiv
-- Diapositiv Slidev theme
-- lihbr/slidev-theme-diapositiv
-
--->
-
 # slidev-theme-diapositiv
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
-[![Codecov][codecov-src]][codecov-href]
 [![Conventional Commits][conventional-commits-src]][conventional-commits-href]
 [![License][license-src]][license-href]
 
-Diapositiv [Slidev][slidev] theme.
-
-- 🟡🟦🔺 &nbsp;Made for [Slidev][slidev];
-- 📹 &nbsp;PIP incrustation mode;
-- 🎨 &nbsp;Colorful @lihbr theme.
+Diapositiv theme for [Slidev](https://github.com/slidevjs/slidev).
 
 ## Install
 
@@ -31,23 +15,7 @@ Add the following frontmatter to your `slides.md`. Start Slidev then it will pro
 theme: <b>diapositiv</b>
 ---</code></pre>
 
-Learn more about [how to use a theme](https://sli.dev/themes/use).
-
-## Layouts
-
-This theme provides the following layouts:
-
-> TODO:
-
-## Components
-
-This theme provides the following components:
-
-> TODO:
-
-## Documentation
-
-To discover what's new on this package check out [the changelog][changelog].
+Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-theme).
 
 ## Contributing
 
@@ -63,13 +31,14 @@ Whether you're helping me fix bugs, improve the docs, or spread the word, I'd lo
 
 ## License
 
-[MIT License][license]
+[MIT][license] License © 2021-PRESENT [Lucie Haberer][lihbr-github]
 
 <!-- Links -->
-
-[changelog]: ./CHANGELOG.md
 [license]: ./LICENSE
-[slidev]: https://github.com/slidevjs/slidev
+[lihbr-github]: https://github.com/lihbr
+
+<!-- Contributing -->
+
 [repo-question]: https://github.com/lihbr/slidev-theme-diapositiv/discussions
 [repo-bug-report]: https://github.com/lihbr/slidev-theme-diapositiv/issues/new?assignees=&labels=bug&template=bug_report.md&title=
 [repo-feature-request]: https://github.com/lihbr/slidev-theme-diapositiv/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
@@ -77,15 +46,11 @@ Whether you're helping me fix bugs, improve the docs, or spread the word, I'd lo
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/slidev-theme-diapositiv/latest.svg
+[npm-version-src]: https://img.shields.io/npm/v/slidev-theme-diapositiv?style=flat&colorA=131010&colorB=54669c
 [npm-version-href]: https://npmjs.com/package/slidev-theme-diapositiv
-[npm-downloads-src]: https://img.shields.io/npm/dm/slidev-theme-diapositiv.svg
+[npm-downloads-src]: https://img.shields.io/npm/dm/slidev-theme-diapositiv?style=flat&colorA=131010&colorB=a54a5e
 [npm-downloads-href]: https://npmjs.com/package/slidev-theme-diapositiv
-[github-actions-ci-src]: https://github.com/lihbr/slidev-theme-diapositiv/workflows/ci/badge.svg
-[github-actions-ci-href]: https://github.com/lihbr/slidev-theme-diapositiv/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/github/lihbr/slidev-theme-diapositiv.svg
-[codecov-href]: https://codecov.io/gh/lihbr/slidev-theme-diapositiv
-[conventional-commits-src]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
+[conventional-commits-src]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?style=flat&colorA=131010&colorB=f27602&logo=conventionalcommits&logoColor=faf1f1
 [conventional-commits-href]: https://conventionalcommits.org
-[license-src]: https://img.shields.io/npm/l/slidev-theme-diapositiv.svg
-[license-href]: https://npmjs.com/package/slidev-theme-diapositiv
+[license-src]: https://img.shields.io/github/license/lihbr/slidev-theme-diapositiv.svg?style=flat&colorA=131010&colorB=759f53
+[license-href]: https://github.com/slidev-theme-diapositiv/blob/master/LICENSE
