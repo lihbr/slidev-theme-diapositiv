@@ -34,7 +34,7 @@ html.font-feature-settings {
 }
 
 .heading-2, h2 {
-	@apply font-black text-[4rem] leading-[1.1];
+	@apply font-bold text-[4rem] leading-[1.1];
 }
 
 .layout {
